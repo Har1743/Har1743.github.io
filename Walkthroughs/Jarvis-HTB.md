@@ -50,5 +50,9 @@ When we reach the website we got a page like this </br>
 Then we tried **sqlmap** with **--os-shell**
 **using this** `<sqlmap -u http://10.10.10.143/room.php?cod=1 --os-shell>`
 
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/sqlmap_1.png)
+
+And we got the shell
+
 ![]()
 
