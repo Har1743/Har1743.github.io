@@ -11,8 +11,6 @@ You have to found **user.txt** and **root.txt** flag. </br>
 
 * **Scanning**
   * open ports and services
-* **Enumeration**
-  * check for malicious directories on machine
 * **Exploitation**
   * SQLI
   * exploitation using sqlmap
@@ -33,5 +31,10 @@ As we can see that port **22** and **80** are open.
 
 **Now start enumerating the website**
 
-When we reach the website we got a page like this
+When we reach the website we got a page like this </br>
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/page.png)
+
+After some time we found a page **room.php** </br>
 ![]()
+
+
