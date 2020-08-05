@@ -1,2 +1,2 @@
 # ss
-![](Hardik-writeups/Walkthroughs/photos/jarvis.png)
+![](/photos/jarvis.png)
