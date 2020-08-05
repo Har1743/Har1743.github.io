@@ -54,5 +54,8 @@ Then we tried **sqlmap** with **--os-shell**
 
 And we got the shell
 
-![]()
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/sql_1.png)
 
+Now we can use any reverse shell to get access of the machine
+
+![]()
