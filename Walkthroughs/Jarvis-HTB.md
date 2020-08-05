@@ -25,4 +25,13 @@ You have to found **user.txt** and **root.txt** flag. </br>
 Now start pentesting the **Jarvis** machine. </br>
 
 ## Checking for open ports and services
+
+We used **nmap** for checing the open ports and what services are running.
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/nmap.png)
+
+As we can see that port **22** and **80** are open.
+
+**Now start enumerating the website**
+
+When we reach the website we got a page like this
 ![]()
