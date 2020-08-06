@@ -85,3 +85,12 @@ functionality,file name auto-download pattern matching, and even execute remote 
 simplify searching for potentially sensitive data across large networks. </br>
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/smbmap.png)
+
+As by using smbmap we found two share drives
+* general (READ only)
+* Development (READ, WRITE)
+
+Now try to connect with the smbclient service
+* Using smbclient
+
+smbclient is a client that can 'talk' to an SMB/CIFS server.
