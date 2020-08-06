@@ -191,7 +191,24 @@ but there is no way to upload file on the website </br>
 
 So we upload our php **reverse shell**
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/shell.png)
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/she.png)
+
+Now its time to execute our reverse shell</br>
+But where our reverse shell php file is stored </br>
+
+let's check where smbclient stores files
+* `smbclient -L friendzone.red.`
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/file.png)
+
+We can see that samba store files in **/etc/files**
+
+So we can execute our shell through </br>
+and also start the listener
+* `https://administrator1.friendzone.red./dashboard.php?image_id=a.jpg&pagename=/etc/Development/shell.php`
+
+
+
 
 
 
