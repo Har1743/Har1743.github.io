@@ -13,6 +13,8 @@ You have to found **user.txt** and **root.txt** flag.
 
 * Scanning
   * open ports, versions and services
+* Enumeration
+  * Enumerating the smb services
   
 ## Scanning
 
@@ -77,6 +79,8 @@ Nmap done: 1 IP address (1 host up) scanned in 81.10 seconds
 
 ```
 
+## Enumeration
+
 As we can see that smb services are open so try to enumerate it. </br>
 * Using smbmap
 
@@ -90,7 +94,29 @@ As by using smbmap we found two share drives
 * general (READ only)
 * Development (READ, WRITE)
 
-Now try to connect with the smbclient service
+Now try to connect with the smbclient service to the shared drives </br>
 * Using smbclient
+let us assume there might some malicious content.
 
 smbclient is a client that can 'talk' to an SMB/CIFS server.
+
+**Let's start with the Development folder**
+
+`smbclient //10.10.10.123/Development`
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/dev.png)
+
+As there is nothing in this folder. </br>
+
+**Let's start with the general folder**
+
+`smbclient //10.10.10.123/general`
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/gen.png)
+
+We found a txt file named **creds.txt** </br>
+Download the file `get creds.txt` </br>
+Read that file `cat creds.txt` </br>
+
+We found a credential but we dont know where to use this
+* `admin:WORKWORKHhallelujah@#`
