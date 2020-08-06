@@ -7,7 +7,7 @@ It is a Linux based machine. </br>
 This machine has a static IP address <10.10.10.123> </br>
 It was a nice bit tricky and interesting machine. </br>
 </br>
-You have to found user.txt and root.txt flag. 
+You have to found **user.txt** and **root.txt** flag. 
 
 ## Penetration Methodology
 
@@ -16,7 +16,7 @@ You have to found user.txt and root.txt flag.
   
 ## Scanning
 
-Let's start our nmap to know about open ports, versions and services running on the machine.
+Let's start our nmap to know about **open ports**, **versions** and **services** running on the machine.
 
 ```
 nmap -sC -sV -sT -A 10.10.10.123
