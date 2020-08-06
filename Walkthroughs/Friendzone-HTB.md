@@ -183,4 +183,15 @@ We got a **HAHA** image
 But at bottom of the page we got something suspicious</br>
 **Final Access timestamp is 1596732990**
 
+The timestamp might be some filename so in the same way we can execute our shell too </br>
+But firstly we have to upload our shell on the webserver </br>
+but there is no way to upload file on the website </br>
+
+**Wait** we can upload the file through smbserver file share with **Development** folder
+
+So we upload our php **reverse shell**
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/shell.png)
+
+
 
