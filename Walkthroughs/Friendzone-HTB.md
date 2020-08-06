@@ -158,3 +158,16 @@ We got this page but nothing suspicious like administration  </br>
 **Let's try** `administrator1.friendzone.red.` **with https**
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/https.png)
+
+**Let's try those credentials which we have found in creds.txt**
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/login.png)
+
+Here we got a message
+`Login Done ! visit /dashboard.php`
+
+Now let's move on to `https://administrator1.friendzone.red./dashboard.php`
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/dash.png)
+
+
