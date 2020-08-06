@@ -71,5 +71,14 @@ Simply execute the reverse shell and also start the listener </br>
 
 Now we are www-data user so we enumerate for **user.txt** flag
 
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/enu_ww.png)
+
+As we can see that only root and pepper user has privelages to read **user.txt** </br>
+So we have to escalate our privelage to **pepper** user.
+
+## Post Exploitation
+
+So after some enumearating I look into **sudoers file**
+
 ![]()
 
