@@ -148,3 +148,13 @@ Let's add these to **/etc/hosts**
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/etc.png)
 
+Let's enumerate the `administrator1.friendzone.red.`
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/http.png)
+
+We got this page but nothing suspicious like administration  </br>
+
+**Wait nmap shows https service is also open**</br>
+**Let's try** `administrator1.friendzone.red.` **with https**
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/https.png)
