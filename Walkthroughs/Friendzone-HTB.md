@@ -77,3 +77,4 @@ Nmap done: 1 IP address (1 host up) scanned in 81.10 seconds
 
 ```
 
+As we can see that smb services are open so try to enumerate it.
