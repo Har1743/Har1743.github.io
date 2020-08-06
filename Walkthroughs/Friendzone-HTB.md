@@ -205,7 +205,19 @@ We can see that samba store files in **/etc/files**
 
 So we can execute our shell through </br>
 and also start the listener
-* `https://administrator1.friendzone.red./dashboard.php?image_id=a.jpg&pagename=/etc/Development/shell.php`
+* `https://administrator1.friendzone.red./dashboard.php?image_id=a.jpg&pagename=/etc/Development/shell`
+
+Did you notice we haven't type **.php** as it is automatically appended to it
+
+**We got the shell**
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/conn.png)
+
+we can see that we are only **www-data** user and only **root user** can read user.txt
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/ww.png)
+
+
 
 
 
