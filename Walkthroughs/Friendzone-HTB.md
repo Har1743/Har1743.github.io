@@ -122,11 +122,11 @@ Read that file `cat creds.txt` </br>
 We found a credential but we dont know where to use this
 * `admin:WORKWORKHhallelujah@#`
 
-We are done with smb enumeration </br>
+**We are done with smb enumeration** </br>
 
 I have tried the credentials which we have found from the creds.txt but it didn't work. </br>
 
-I have also tried to enumerate the website but didn't found suspicious.</br>
+**I have also tried to enumerate the website but didn't found suspicious.**</br>
 
 As nmap aslo shows us that dns service is open. </br>
 
@@ -147,3 +147,4 @@ uploads.friendzone.red.
 Let's add these to **/etc/hosts**
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/etc.png)
+
