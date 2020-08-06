@@ -80,6 +80,8 @@ Nmap done: 1 IP address (1 host up) scanned in 81.10 seconds
 As we can see that smb services are open so try to enumerate it. </br>
 * Using smbmap
 
-**smbmap allows users to enumerate samba share drives across an entire domain. List share drives, drive permissions, share contents, upload/download
+smbmap allows users to enumerate samba share drives across an entire domain. List share drives, drive permissions, share contents, upload/download
 functionality,file name auto-download pattern matching, and even execute remote commands. This tool was designed with pen testing in mind, and is intended to
-simplify searching for potentially sensitive data across large networks.** </br>
+simplify searching for potentially sensitive data across large networks. </br>
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/smbmap.png)
