@@ -108,7 +108,7 @@ smbclient is a client that can 'talk' to an SMB/CIFS server.
 
 As there is nothing in this folder. </br>
 
-**Let's start with the general folder**
+**Let's try with the general folder**
 
 `smbclient //10.10.10.123/general`
 
@@ -120,3 +120,5 @@ Read that file `cat creds.txt` </br>
 
 We found a credential but we dont know where to use this
 * `admin:WORKWORKHhallelujah@#`
+
+We are done with smb enumeration </br>
