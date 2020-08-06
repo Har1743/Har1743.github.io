@@ -78,7 +78,29 @@ So we have to escalate our privelage to **pepper** user.
 
 ## Post Exploitation
 
-So after some enumearating I look into **sudoers file**
+So after some enumerating I look into **sudoers file**
 
-![]()
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/w_perm.png)
+
+As we can see that **www-data** can run **/var/www/Admin-Utilities/simpler.py** </br>
+with **pepper** user permission.
+
+So we go through the **/var/www/Admin-Utilities/simpler.py** python file </br>
+and in that we can see a **exec_ping** function and it looks something suspicious for privelage escalation to **pepper**.
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/ping.png)
+
+As there are some blacklist symbols but **$** symbol is not blacklisted. </br>
+
+So we simply run 
+* `< sudo -u pepper /var/www/Admin-Utilities/simpler.py -p >`
+with **-p** which is ping option
+
+Then it pop up with **Enter an IP** option </br>
+There use the non-blacklisted symbol with bash command
+* `< $(bash) >`
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/pepper_shell.png)
+
+
 
