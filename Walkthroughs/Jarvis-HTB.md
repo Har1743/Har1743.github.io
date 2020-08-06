@@ -48,7 +48,8 @@ When we reach the website we got a page like this </br>
 ## Exploitation using sqlmap
 
 Then we tried **sqlmap** with **--os-shell**
-**using this** `<sqlmap -u http://10.10.10.143/room.php?cod=1 --os-shell>`
+**using this** 
+* `<sqlmap -u http://10.10.10.143/room.php?cod=1 --os-shell>`
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/sqlmap_1.png)
 
@@ -67,4 +68,8 @@ Simply execute the reverse shell and also start the listener </br>
 **We got the shell but it is not the proper user**
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/conn.png)
+
+Now we are www-data user so we enumerate for **user.txt** flag
+
+![]()
 
