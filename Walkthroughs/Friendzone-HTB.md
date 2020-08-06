@@ -163,11 +163,24 @@ We got this page but nothing suspicious like administration  </br>
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/login.png)
 
+**YUPS we have login successfully**
+
 Here we got a message
 `Login Done ! visit /dashboard.php`
 
 Now let's move on to `https://administrator1.friendzone.red./dashboard.php`
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/dash.png)
+
+Now the page shows me some message
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/text.png)
+
+We got a **HAHA** image 
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/haha.png)
+
+But at bottom of the page we got something suspicious</br>
+**Final Access timestamp is 1596732990**
 
 
