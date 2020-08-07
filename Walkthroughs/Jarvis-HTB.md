@@ -1,5 +1,5 @@
 # Hack The Box - Jarvis walkthrough
-![](/photos/jarvis.png?raw=true)
+![](/photos/jarvis.png)
 
 This walkthrough is about the retired Jarvis machine of Hack The box.  
 It is a Linux based machine.  
