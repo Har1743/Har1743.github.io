@@ -274,3 +274,36 @@ We have found that reporter.py is running with **root** privelages
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/report.png)
 
+Now lets see what we can catch from reporter.py
+
+We didn't find any vulnerablity in the **reporter.py** source code </br>
+But in that we got about that the code is import **os module**
+
+```
+#!/usr/bin/python
+
+import os
+
+to_address = "admin1@friendzone.com"
+from_address = "admin2@friendzone.com"
+
+print "[+] Trying to send email to %s"%to_address
+
+#command = ''' mailsend -to admin2@friendzone.com -from admin1@friendzone.com -ssl -port 465 -auth -smtp smtp.gmail.co-sub scheduled results email +cc +bc -v -user you -pass "PAPAP"'''
+
+#os.system(command)
+
+# I need to edit the script later
+# Sam ~ python developer
+```
+
+so we can do some with python **os module**
+
+Let's locate for os module
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/loc.png)
+
+we found there are two files
+* os.py
+* os.pyc
+
