@@ -2,5 +2,5 @@
 ## Vulnhub, Hack The Box, Over The Wire
 
 >> [Zarvis(HTB)]()  
->> [FriendZone(HTB)](/Friendzone-HTB.md)   
+>> [FriendZone(HTB)](/Walkthroughs/Friendzone-HTB.md)   
 
