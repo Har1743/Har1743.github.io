@@ -9,8 +9,8 @@ I Love to explore new concepts everday and also love to write about it.
 ## Writeups
   
   
-### >> [Walkthroughs](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/index.md)
-### >> [Articles](https://github.com/Har1743/Hardik-writeups/tree/master/Articles)
+### >> [Walkthroughs](/Walkthroughs/)
+### >> [Articles](/Articles/)
 
 
 
