@@ -218,7 +218,7 @@ Did you notice we haven't type **.php** as it is automatically appended to it
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/conn.png)
 
-we can see that we are only **www-data** user and only **root user** can read user.txt
+we can see that we are only **www-data** user and we can't read user.txt now.
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/ww.png)
 
@@ -242,10 +242,21 @@ So let's use this
 
 **We are now friend user**
 
+Let's try to login with ssh with the same friend credentials
 
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/ssh.png)
 
+**Hey! it works**
 
+Now let's read user.txt
 
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/user.png)
 
+Now escalate our privelage to **root**
+
+After looking for **SUID bit set** we didn't found anything suspicious</br>
+So we look for background running processes 
+
+**Let's transfer ![pspy32](https://github.com/DominicBreuker/pspy)to check what process is running in background**
 
 
