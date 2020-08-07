@@ -16,6 +16,11 @@ You have to found **user.txt** and **root.txt** flag.
 * Enumeration
   * Enumerating the smb services
   * DNS enumeration
+  * Website enumeration
+  * Execute our reverse shell
+* Post Exploitation
+  * Escalate our privelages
+  * Get flags
   
 ## Scanning
 
@@ -216,6 +221,26 @@ Did you notice we haven't type **.php** as it is automatically appended to it
 we can see that we are only **www-data** user and only **root user** can read user.txt
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/ww.png)
+
+## Post exploitation
+
+We have to escalate our privelages 
+
+**Let's enumerate** </br>
+after sometime we found a `mysql_data.conf` file </br>
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/mysql.png)
+
+**In this we have found credentials for friend user**
+```
+db_user=friend
+db_pass=Agpyu12!0.213$
+```
+So let's use this 
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/friend.png)
+
+**We are now friend user**
 
 
 
