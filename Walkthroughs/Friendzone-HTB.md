@@ -270,5 +270,7 @@ chmod +x pspy32
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/pspy32.png)
 
+We have found that reporter.py is running with **root** privelages
 
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/report.png)
 
