@@ -2,11 +2,11 @@
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/logo.png)
 
-Today I am writing a walkthrough of the retired FriendZone machine of Hack The box. </br>
-It is a Linux based machine. </br>
-This machine has a static IP address <10.10.10.123> </br>
-It was a nice bit tricky and interesting machine. </br>
-</br>
+Today I am writing a walkthrough of the retired FriendZone machine of Hack The box.  
+It is a Linux based machine.  
+This machine has a static IP address <10.10.10.123>  
+It was a nice bit tricky and interesting machine.  
+  
 You have to found **user.txt** and **root.txt** flag. 
 
 ## Penetration Methodology
