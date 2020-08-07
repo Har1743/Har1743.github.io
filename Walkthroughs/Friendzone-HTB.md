@@ -1,6 +1,6 @@
 # Hack The Box - FriendZone walkthrough
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/logo.png)
+![](/photos/Friendzone-photos/logo.png)
 
 Today I am writing a walkthrough of the retired FriendZone machine of Hack The box.  
 It is a Linux based machine.  
