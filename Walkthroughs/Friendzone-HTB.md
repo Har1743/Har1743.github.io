@@ -257,7 +257,7 @@ Now escalate our privelage to **root**
 After looking for **SUID bit set** we didn't found anything suspicious  
 So we look for background running processes 
 
-**Let's transfer ![pspy32](https://github.com/DominicBreuker/pspy) to check what process is running in background**
+**Let's transfer [pspy32](https://github.com/DominicBreuker/pspy) to check what process is running in background**
 
 Now lets run this script
 
