@@ -110,7 +110,7 @@ smbclient is a client that can 'talk' to an SMB/CIFS server.
 
 `smbclient //10.10.10.123/Development`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/dev.png)
+![](/photos/Friendzone-photos/dev.png)
 
 As there is nothing in this folder.  
 
@@ -118,7 +118,7 @@ As there is nothing in this folder.
 
 `smbclient //10.10.10.123/general`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/gen.png)
+![](/photos/Friendzone-photos/gen.png)
 
 We found a txt file named **creds.txt**  
 Download the file `get creds.txt`  
@@ -139,7 +139,7 @@ As nmap aslo shows us that dns service is open.
 
 `dig axfr friendzone.red @10.10.10.123`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/dig.png)
+![](/photos/Friendzone-photos/dig.png)
 
 We have found many subdomains
 ```
@@ -151,22 +151,22 @@ uploads.friendzone.red.
 
 Let's add these to **/etc/hosts**
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/etc.png)
+![](/photos/Friendzone-photos/etc.png)
 
 Let's enumerate the `administrator1.friendzone.red.`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/http.png)
+![](/photos/Friendzone-photos/http.png)
 
 We got this page but nothing suspicious like administration  
 
 **Wait nmap shows https service is also open**  
 **Let's try** `administrator1.friendzone.red.` **with https**
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/https.png)
+![](/photos/Friendzone-photos/https.png)
 
 **Let's try those credentials which we have found in creds.txt**
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/login.png)
+![](/photos/Friendzone-photos/login.png)
 
 **YUPS we have login successfully**
 
@@ -175,15 +175,15 @@ Here we got a message
 
 Now let's move on to `https://administrator1.friendzone.red./dashboard.php`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/dash.png)
+![](/photos/Friendzone-photos/dash.png)
 
 Now the page shows me some message
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/text.png)
+![](/photos/Friendzone-photos/text.png)
 
 We got a **HAHA** image 
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/haha.png)
+![](/photos/Friendzone-photos/haha.png)
 
 But at bottom of the page we got something suspicious  
 **Final Access timestamp is 1596732990**
@@ -196,7 +196,7 @@ but there is no way to upload file on the website
 
 So we upload our php **reverse shell**
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/she.png)
+![](/photos/Friendzone-photos/she.png)
 
 Now its time to execute our reverse shell  
 But where our reverse shell php file is stored   
@@ -204,7 +204,7 @@ But where our reverse shell php file is stored
 let's check where smbclient stores files
 * `smbclient -L friendzone.red.`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/file.png)
+![](/photos/Friendzone-photos/file.png)
 
 We can see that samba store files in **/etc/files**
 
@@ -216,11 +216,11 @@ Did you notice we haven't type **.php** as it is automatically appended to it
 
 **We got the shell**
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/conn.png)
+![](/photos/Friendzone-photos/conn.png)
 
 we can see that we are only **www-data** user and we can't read user.txt now.
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/ww.png)
+![](/photos/Friendzone-photos/ww.png)
 
 ## Post exploitation
 
@@ -229,7 +229,7 @@ We have to escalate our privelages
 **Let's enumerate**   
 after sometime we found a `mysql_data.conf` file  
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/mysql.png)
+![](/photos/Friendzone-photos/mysql.png)
 
 **In this we have found credentials for friend user**
 ```
@@ -238,19 +238,19 @@ db_pass=Agpyu12!0.213$
 ```
 So let's use this 
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/friend.png)
+![](/photos/Friendzone-photos/friend.png)
 
 **We are now friend user**
 
 Let's try to login with ssh with the same friend credentials
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/ssh.png)
+![](/photos/Friendzone-photos/ssh.png)
 
 **Hey! it works**
 
 Now let's read user.txt
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/user.png)
+![](/photos/Friendzone-photos/user.png)
 
 Now escalate our privelage to **root**
 
@@ -268,11 +268,11 @@ chmod +x pspy32
 ./pspy32
 ```
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/pspy32.png)
+![](/photos/Friendzone-photos/pspy32.png)
 
 We have found that reporter.py is running with **root** privelages
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/report.png)
+![](/photos/Friendzone-photos/report.png)
 
 Now lets see what we can catch from reporter.py
 
@@ -301,7 +301,7 @@ so we can do some with python **os module**
 
 Let's locate for os module
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/loc.png)
+![](/photos/Friendzone-photos/loc.png)
 
 we found there are two files
 * os.py
@@ -315,7 +315,7 @@ Basically we will append our reverse shell in os.py so that when the process run
 before executing this start the listener  
 we will got our shell in few seconds or minutes later
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/root.png)
+![](/photos/Friendzone-photos/root.png)
 
 ### We got the root access
 
