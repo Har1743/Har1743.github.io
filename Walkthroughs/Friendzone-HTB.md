@@ -94,7 +94,7 @@ smbmap allows users to enumerate samba share drives across an entire domain. Lis
 functionality,file name auto-download pattern matching, and even execute remote commands. This tool was designed with pen testing in mind, and is intended to
 simplify searching for potentially sensitive data across large networks.  
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/smbmap.png)
+![](/photos/Friendzone-photos/smbmap.png)
 
 As by using smbmap we found two share drives
 * general (READ only)
