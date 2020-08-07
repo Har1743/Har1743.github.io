@@ -1,5 +1,5 @@
 # Hack The Box - Jarvis walkthrough
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/jarvis.png?raw=true)
+![](/photos/jarvis.png?raw=true)
 
 This walkthrough is about the retired Jarvis machine of Hack The box.  
 It is a Linux based machine.  
@@ -28,20 +28,20 @@ Now start pentesting the **Jarvis** machine.
 ## Checking for open ports and services
 
 We used **nmap** for checing the open ports and what services are running.
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/nmap.png)
+![](/photos/nmap.png)
 
 As we can see that port **22** and **80** are open.
 
 **Now start enumerating the website**
 
 When we reach the website we got a page like this  
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/page.png)
+![](/photos/page.png)
 
 ## Enumerating the Website
 
 **While enumerating the website after some time we found a page room.php**  
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/sql_vul_room.png)
+![](/photos/sql_vul_room.png)
 
 **This seems to be sql vulnerable** --> `<10.10.10.143/room.php?cod=1>` 
 
@@ -51,11 +51,11 @@ Then we tried **sqlmap** with **--os-shell**
 **using this** 
 * `sqlmap -u http://10.10.10.143/room.php?cod=1 --os-shell`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/sqlmap_1.png)
+![](/photos/sqlmap_1.png)
 
 And we got the shell
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/sql_1.png)
+![](/photos/sql_1.png)
 
 Now we can use any reverse shell to get access of the machine
 
@@ -67,11 +67,11 @@ Simply execute the reverse shell and also start the listener
 
 **We got the shell but it is not the proper user**
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/conn.png)
+![](/photos/conn.png)
 
 Now we are www-data user so we enumerate for **user.txt** flag
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/enu_ww.png)
+![](/photos/enu_ww.png)
 
 As we can see that only root and pepper user has privelages to read **user.txt**  
 So we have to escalate our privelage to **pepper** user.
@@ -80,7 +80,7 @@ So we have to escalate our privelage to **pepper** user.
 
 So after some enumerating I look into **sudoers file**
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/w_perm.png)
+![](/photos/w_perm.png)
 
 As we can see that **www-data** can run **/var/www/Admin-Utilities/simpler.py**  
 with **pepper** user permission.
@@ -88,7 +88,7 @@ with **pepper** user permission.
 So we go through the **/var/www/Admin-Utilities/simpler.py** python file  
 and in that we can see a **exec_ping** function and it looks something suspicious for privelage escalation to **pepper**.
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/ping.png)
+![](/photos/ping.png)
 
 As there are some blacklist symbols but **$** symbol is not blacklisted.  
 
@@ -100,7 +100,7 @@ Then it pop up with **Enter an IP** option
 There use the non-blacklisted symbol with bash command
 * ` $(bash) `
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/pepper_shell.png)
+![](/photos/pepper_shell.png)
 
 **We got the pepper user**  
 
@@ -115,7 +115,7 @@ Then we enumerate ffor **user.txt**
 * `ls -al`
 * `cat user.txt`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/user.png)
+![](/photos/user.png)
 
 Now we have to read our **root.txt** flag  
 So for that we have to escalate our privelage to **root**.
@@ -123,7 +123,7 @@ So for that we have to escalate our privelage to **root**.
 So firstly we check for **SUID bit SET**
 * `find / -perm -u=s -type f 2>/dev/null`
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/suid.png)
+![](/photos/suid.png)
 
 Here we find **/bin/systemctl** service running with **root** permission  
 
@@ -146,11 +146,11 @@ Now enable the service
 * /bin/systemctl enable /home/pepper/shell.service
 * /bin/systemctl start shell
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/ena.png)
+![](/photos/ena.png)
 
 Now start the listener again
 
-![](https://github.com/Har1743/Hardik-writeups/blob/master/Walkthroughs/photos/root.png)
+![](/photos/root.png)
 
 **We got the root.txt flag**
 This is very good machine and I learn a lot of new things.
