@@ -1,6 +1,6 @@
 # Hardik-writeups
 
-## Hi! </br>
+## Hi! 
 
 **I am Hardik Chugh**
 
