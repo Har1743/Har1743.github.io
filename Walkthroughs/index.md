@@ -9,4 +9,4 @@
 ## Vulnhubs
 
 ## Overthewire 
->> [Bandit 0-5](/Walkthroughs/Bandit-OTW)
+>> [Bandit Level 0-5](/Walkthroughs/Bandit-OTW)
