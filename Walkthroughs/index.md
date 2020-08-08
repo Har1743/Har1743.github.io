@@ -3,10 +3,10 @@
    
 ****  
 ## Hack The Box
->> [Zarvis(HTB)](/Walkthroughs/Jarvis-HTB)  
->> [FriendZone(HTB)](/Walkthroughs/Friendzone-HTB)   
+>> [Zarvis](/Walkthroughs/Jarvis-HTB)  
+>> [FriendZone](/Walkthroughs/Friendzone-HTB)   
 
 ## Vulnhubs
 
 ## Overthewire 
->> [Bandit](/Walkthroughs/Bandit-OTW)
+>> [Bandit 0-5](/Walkthroughs/Bandit-OTW)
