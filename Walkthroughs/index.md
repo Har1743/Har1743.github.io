@@ -4,7 +4,7 @@
 ****  
 ## Hack The Box
 >> [Jarvis](/Walkthroughs/Jarvis-HTB)  
->> [FriendZone](/Walkthroughs/Friendzone-HTB) 
+>> [FriendZone](/Walkthroughs/Friendzone-HTB)   
 >> [Devel](/Walkthroughs/Devel-HTB)
 
 ## Vulnhubs
