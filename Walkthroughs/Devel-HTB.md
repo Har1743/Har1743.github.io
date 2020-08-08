@@ -16,6 +16,7 @@ You have to found **user.txt** and **root.txt** flag.
 * Enumeration
   * ftp enumeration
   * http enumeration
+  * execute reverse shell
 
 ## Scanning
 
@@ -40,4 +41,12 @@ we can access ftp files from website.
 
 ![](/photos/devel-photos/welcome.png)
 
+Now let's upload our reverse shell on ftp server
+But first check about the version and type of file which we can run on the website.
+
+![](/photos/devel-photos/asp.png)
+
+As we can see that this is a asp.net website.  
+We can now upload our aspx reverse shell on ftp server.  
+But first we have to generate it using **msfvenom**
 
