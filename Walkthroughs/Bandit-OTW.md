@@ -1,4 +1,5 @@
-# Bandit Walkthrough (Level 0 - 1)
+# Bandit Walkthrough (Level 0 - 1)  
+  
 Today we will play a war-game names **BANDIT**.  
 This war-game is hosted by Overthewire organisation.  
 
@@ -7,6 +8,15 @@ This war-game is hosted by Overthewire organisation.
 It is absolutely for beginners.  
 
 **It is basically teaches the basic knowledge of linux and ssh in a fun challenging way**
+
+## Objective 
+  
+* Catch the hints given to you. 
+* Login to ssh with credentials.
+* Enumerate for credentials for the next Level.
+
+# Level 0
+
 
 
 
