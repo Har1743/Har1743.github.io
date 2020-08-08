@@ -35,3 +35,9 @@ we can login to ftp with anonymous user.
 As we can see that there is image name **welcome.png**  
 Let's try we can access that image from the website or not.
 
+**Wow**  
+we can access ftp files from website. 
+
+![](/photos/devel-photos/welcome.png)
+
+
