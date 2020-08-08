@@ -14,5 +14,10 @@ You have to found **user.txt** and **root.txt** flag.
 * Scanning
   * open ports, versions and services
 * Enumeration
+  * ftp enumeration
+
+## Scanning
+
+Let's start our nmap to know about **open ports**, **versions** and **services** running on the machine.
 
 ![](/photos/devel-photos/devel-nmap.png)
