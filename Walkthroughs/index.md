@@ -3,7 +3,7 @@
    
 ****  
 ## Hack The Box
->> [Zarvis](/Walkthroughs/Jarvis-HTB)  
+>> [Jarvis](/Walkthroughs/Jarvis-HTB)  
 >> [FriendZone](/Walkthroughs/Friendzone-HTB)   
 
 ## Vulnhubs
