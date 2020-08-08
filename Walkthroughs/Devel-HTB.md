@@ -56,4 +56,12 @@ Now let's upload the aspx shell to ftp.
 
 ![](/photos/devel-photos/ftp-shell.png)
 
+Let's execute our **aspx shell** from the website.  
+Before executing start the listener.  
+
+**Hey we got the shell**  
+We are now **iis apppool\web**
+
+![](/photos/devel-photos/shell.png)
+
 
