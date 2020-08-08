@@ -45,6 +45,7 @@ Whenever you find a password for a level,
 use SSH (on port 2220) to log into that level and continue the game.
 ```
 
+**Commands used**
 1. ls
 2. cat readme
 
@@ -58,14 +59,11 @@ password : boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
 # Level 1-2
 ** **
-**Clue**
+**Level Goal**
 ```
 The password for the next level is stored in a file  
 called - located in the home directory
 ```
-
-The clue tells us that
-* password for the next level is stored in a file called -
 
 Let's login to **bandit1**
 ```
@@ -77,6 +75,10 @@ Now we are login to bandit1
 We have found the - file but we can't read this file by cat -      
 as cat takes -(hypen) as stdin/stout.  
 So we have to prefix it by using **./-**
+
+**Commands used**
+1. ls
+2. cat ./-
 
 ![](/photos/bandit-photos/bandit1-2.png)
 
