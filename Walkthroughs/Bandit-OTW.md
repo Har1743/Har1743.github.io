@@ -90,8 +90,40 @@ password : CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 
 # Level 2-3
 ** **
-**Clue**
+**Level Goal**
 ```
 The password for the next level is stored in a file  
 called spaces in this filename located in the home directory
+```
+
+Let's login to **bandit2**
+```
+ssh -p 2220 bandit2@bandit.labs.overthewire.org
+password : CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+```
+
+Now we are login to bandit2  
+We have to open the file called spaces in this filename  
+But we can't read this file normally with cat command  
+As cat command reads filename until the space as it considers space as null.    
+So we have to use "" so that cat ignores the space between the filename.
+
+**Commands used**
+1. ls
+2. cat "spaces in this filename"
+
+![](/photos/bandit-photos/bandit2-3.png)
+
+We got the password for next level
+```
+username : bandit3
+password : UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+```
+
+# Level 3-4
+** **
+**Level Goal**
+```
+The password for the next level is stored in a hidden file  
+in the inhere directory.
 ```
