@@ -16,7 +16,7 @@ It is absolutely for beginners.
 * Enumerate for credentials for the next Level.
 
 # Level 0
-
+** **
 **Clue**
 ```
 The goal of this level is for you to log into the game using SSH.  
