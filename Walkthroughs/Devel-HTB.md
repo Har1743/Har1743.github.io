@@ -79,9 +79,10 @@ Let's try **windwos-exploit suggestor** copy systeminfo and try with that.
 as **windwos-exploit suggestor** suggests us a bunch of exploit.  
 So let's try MS10-015: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege.  
 
-Firstly download the exploit..
+It didnt work.  
+let's try another exploit [MS11-046](https://www.exploit-db.com/download/40564)  
 
-![](/photos/devel-photos/ms.png)
+
 
 
 
