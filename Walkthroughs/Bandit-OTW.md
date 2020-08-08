@@ -28,7 +28,7 @@ Once logged in, go to the Level 1 page to find out how to beat Level 1.
   
 The clue tells us that just we have to just login to given host with ssh on port 2220
 ```
-ssh -p 2220 bandit@bandit.labs.overthewire.org
+ssh -p 2220 bandit0@bandit.labs.overthewire.org
 password : bandit0
 ```
 
@@ -68,3 +68,22 @@ called - located in the home directory
 
 The clue tells us that
 * password for the next level is stored in a file called -
+
+Let's login to **bandit1**
+```
+ssh -p 2220 bandit1@bandit.labs.overthewire.org
+password : boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+```
+
+Now we are login to bandit1  
+We have found the - file but we to read this file  
+cat - doesn't works as cat takes -(hypen) as stdin/stout.  
+So we have to prefix it by using **./-**
+
+![](/photos/bandit-photos/bandit1-2.png)
+
+We got the password for next level
+```
+username : bandit2
+password : CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+```
