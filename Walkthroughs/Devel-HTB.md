@@ -14,3 +14,5 @@ You have to found **user.txt** and **root.txt** flag.
 * Scanning
   * open ports, versions and services
 * Enumeration
+
+![](/photos/devel-photos/devel-nmap.png)
