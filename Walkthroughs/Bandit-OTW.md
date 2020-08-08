@@ -145,6 +145,8 @@ So we do ls -al to show the hidden file
 3. ls -al
 4. cat .hidden
 
+![](/photos/bandit-photos/bandit3-4.png)
+
 We got the password for next level
 ```
 username : bandit4
