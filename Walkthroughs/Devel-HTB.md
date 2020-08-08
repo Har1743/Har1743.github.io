@@ -17,6 +17,9 @@ You have to found **user.txt** and **root.txt** flag.
   * ftp enumeration
   * http enumeration
   * execute reverse shell
+* Post Exploitation
+  * user flag
+  * root flag
 
 ## Scanning
 
@@ -63,5 +66,23 @@ Before executing start the listener.
 We are now **iis apppool\web**
 
 ![](/photos/devel-photos/shell.png)
+
+## Post Exploitation
+
+Let's enumerate for user flag  
+Right now we can't read any flag so let's escalate our privelages.
+
+![](/photos/devel-photos/denied.png)
+
+Let's try **windwos-exploit suggestor** copy systeminfo and try with that.
+
+as **windwos-exploit suggestor** suggests us a bunch of exploit.  
+So let's try MS10-015: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege.  
+
+Firstly download the exploit..
+
+![](/photos/devel-photos/ms.png)
+
+
 
 
