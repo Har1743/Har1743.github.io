@@ -127,3 +127,36 @@ password : UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 The password for the next level is stored in a hidden file  
 in the inhere directory.
 ```
+
+Let's login to **bandit3**
+```
+ssh -p 2220 bandit3@bandit.labs.overthewire.org
+password : UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+```
+
+Now we are login to bandit3  
+let's enumerate to inhere directory  
+As by doing normal ls we are not able to see the file  
+So we do ls -al to show the hidden file  
+
+**Commands used**
+1. ls
+2. cd inhere
+3. ls -al
+4. cat .hidden
+
+We got the password for next level
+```
+username : bandit4
+password : pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+```
+
+# Level 4-5
+** **
+**Level Goal**
+```
+The password for the next level is stored in the only human-readable file  
+in the inhere directory.   
+Tip: if your terminal is messed up, try the “reset” command.
+```
+
