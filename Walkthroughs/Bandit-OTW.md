@@ -162,3 +162,69 @@ in the inhere directory.
 Tip: if your terminal is messed up, try the “reset” command.
 ```
 
+Let's login to **bandit4**
+```
+ssh -p 2220 bandit4@bandit.labs.overthewire.org
+password : pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+```
+
+Now we are login to bandit4    
+let's enumerate to inhere directory  
+Here we found there are many files but we dont't know which file is human readable  
+So we can find usind file command file ./* - this cmd checks for the type of file.
+
+**Commands used**
+1. ls
+2. cd inhere
+3. ls 
+4. file ./*
+5. cat ./-file07
+
+![](/photos/bandit-photos/bandit4-5.png)
+
+We got the password for next level
+```
+username : bandit5
+password : koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+```
+
+# Level 5-6
+** **
+**Level Goal**
+```
+The password for the next level is stored in a file  
+somewhere under the inhere directory   
+and has all of the following properties:
+human-readable
+1033 bytes in size
+not executable
+```
+
+Let's login to **bandit5**
+```
+ssh -p 2220 bandit5@bandit.labs.overthewire.org
+password : koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+```
+
+Now we are login to bandit5  
+So let's enumerate in inhere directory  
+we have found a bunch of directories in inhere  
+so we have to find our file having 1033 bytes in size  
+using find command as find . -size 1033c (c is for bytes).
+
+**Commands used**
+1. ls
+2. cd inhere
+3. ls 
+4. find . -size 1033c
+5. cat ./maybehere07/.file2
+
+![](/photos/bandit-photos/bandit5-6.png)
+
+We got the password for next level
+```
+username : bandit6
+password : DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+```
+
+Author : Hardik Chugh
