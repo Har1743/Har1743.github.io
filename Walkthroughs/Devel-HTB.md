@@ -15,9 +15,23 @@ You have to found **user.txt** and **root.txt** flag.
   * open ports, versions and services
 * Enumeration
   * ftp enumeration
+  * http enumeration
 
 ## Scanning
 
 Let's start our nmap to know about **open ports**, **versions** and **services** running on the machine.
 
 ![](/photos/devel-photos/devel-nmap.png)
+
+Now we are done with our nmap.  
+
+## Enumeration
+
+As nmap shows us that ftp service is open and  
+we can login to ftp with anonymous user.
+
+![](/photos/devel-photos/ftp-acess.png)
+
+As we can see that there is image name **welcome.png**  
+Let's try we can access that image from the website or not.
+
