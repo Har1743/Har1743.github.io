@@ -91,9 +91,14 @@ let's decode that message on [https://www.base64decode.org/](https://www.base64d
 VRNLU-FTLMS-LSFEJ-PUOOD-DBUNQ
 ```
 
-## Got to the invite page again and use this invite code there
+**Got to the invite page again and use this invite code on the invite page**  
+
+![](/photos/Invite-code-HTB/in.png)
+
+**We are in**  
+Now make your account.  
   
-### HAPPY HACKING
+## HAPPY HACKING
   
 Author : Hardik Chugh
 
