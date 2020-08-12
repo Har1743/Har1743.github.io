@@ -22,5 +22,8 @@ The answer is that we have to fuzz the website and enumerate for invite code.
 
 Firstly got to the official HTB website.  
 [https://www.hackthebox.eu](https://www.hackthebox.eu)
+  
+Then there is a page for **Join now**  
+[https://www.hackthebox.eu/invite](https://www.hackthebox.eu/invite)
 
 
