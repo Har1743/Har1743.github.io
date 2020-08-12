@@ -25,4 +25,11 @@ Firstly got to the official HTB website.
 Then there is a page for **Join now**  
 [https://www.hackthebox.eu/invite](https://www.hackthebox.eu/invite)
 
+![](/photos/Invite-code-HTB/invite_page.png)
+
+**Now what** we are stuck that we dont have the invite code.  
+Let's start enumerating the website. 
+  
+#### Let's check the inspect element
+
 
