@@ -41,3 +41,20 @@ Then we redirected to a page
 
 ![](/photos/Invite-code-HTB/make.png)
 
+Let's check this content  
+  
+Wait we got something there is line  
+```
+'function|console|log|makeInviteCode|ajax|type|POST|dataType
+|json|url||api|invite|how|to|generate|success|error'
+```
+  
+In this **makeInviteCode** looks suspicious let's again go to the invite page and check the contents of **makeInviteCode**  
+[https://www.hackthebox.eu/invite](https://www.hackthebox.eu/invite)  
+  
+Again open the **inspect element** and in that open **console tab** and type **makeInviteCode() and press enter**.  
+
+![](/photos/Invite-code-HTB/makeinvitecode.png)
+
+
+
