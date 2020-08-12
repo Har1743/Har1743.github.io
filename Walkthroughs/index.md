@@ -3,6 +3,7 @@
    
 ****  
 ## Hack The Box
+>> [Invite Code](/Walkthroughs/Invite-code-HTB)
 >> [Jarvis](/Walkthroughs/Jarvis-HTB)  
 >> [FriendZone](/Walkthroughs/Friendzone-HTB)   
 >> [Devel](/Walkthroughs/Devel-HTB)
