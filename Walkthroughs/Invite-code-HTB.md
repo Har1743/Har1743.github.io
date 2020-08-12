@@ -9,4 +9,4 @@ with thousands of people in the security field.
 Click below to hack our invite challenge, then   
 get started on one of our many live machines or challenges.
 
-![](/photos/Invite-code-HTB/htb-page.png)
+![](/photos/Invite-code-HTB/htb_page.png)
