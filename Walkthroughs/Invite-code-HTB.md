@@ -56,7 +56,7 @@ Again open the **inspect element** and in that open **console tab** and type **m
 
 ![](/photos/Invite-code-HTB/makeinvitecode.png)
 
-**Hey we got something valuable**  
+**Hey we got something**  
 There is a data 
 ```
 Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/vaivgr/trarengr
@@ -82,7 +82,19 @@ We got a base64 message
 ```
 VlJOTFUtRlRMTVMtTFNGRUotUFVPT0QtREJVTlE=
 ```  
-let's decode that  
+let's decode that message on [https://www.base64decode.org/](https://www.base64decode.org/)  
 
+![](/photos/Invite-code-HTB/base.png)
+
+**We got our invite code**  
+```
+VRNLU-FTLMS-LSFEJ-PUOOD-DBUNQ
+```
+
+## Got to the invite page again and use this invite code there
+  
+### HAPPY HACKING
+  
+Author : Hardik Chugh
 
 
