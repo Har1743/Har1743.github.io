@@ -31,5 +31,10 @@ Then there is a page for **Join now**
 Let's start enumerating the website. 
   
 #### Let's check the inspect element
+  
+There we found a suspicious path **/js/inviteapi.min.js**
 
+![](/photos/Invite-code-HTB/inspect.png)
+
+Let's check this path  
 
