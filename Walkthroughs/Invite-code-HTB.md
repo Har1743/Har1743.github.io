@@ -37,4 +37,7 @@ There we found a suspicious path **/js/inviteapi.min.js**
 ![](/photos/Invite-code-HTB/inspect.png)
 
 Let's check this path  
+Then we redirected to a page  
+
+![](/photos/Invite-code-HTB/make.png)
 
