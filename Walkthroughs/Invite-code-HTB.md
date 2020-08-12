@@ -57,14 +57,32 @@ Again open the **inspect element** and in that open **console tab** and type **m
 ![](/photos/Invite-code-HTB/makeinvitecode.png)
 
 **Hey we got something valuable**  
-There is a data `Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/vaivgr/trarengr`   
+There is a data 
+```
+Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/vaivgr/trarengr
+```   
 It is **ROT13** encrypted..
   
-Let's decrypt this datafor that i prefer [https://cryptii.com/pipes/rot13-decoder](https://cryptii.com/pipes/rot13-decoder)  
+Let's decrypt this data for that i prefer [https://cryptii.com/pipes/rot13-decoder](https://cryptii.com/pipes/rot13-decoder)  
   
 After decrypting we got a message `In order to generate the invite code, make a POST request to /api/invite/generate`  
 
 ![](/photos/Invite-code-HTB/rot.png)
+
+Let's make a post request to **https://www.hackthebox.eu/api/invite/generate**  
+Using  
+  
+```
+curl -XPOST https://www.hackthebox.eu/api/invite/generate
+```  
+
+![](/photos/Invite-code-HTB/curl.png)
+
+We got a base64 message 
+```
+VlJOTFUtRlRMTVMtTFNGRUotUFVPT0QtREJVTlE=
+```  
+let's decode that  
 
 
 
