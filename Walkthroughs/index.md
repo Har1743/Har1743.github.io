@@ -9,7 +9,7 @@
 >> [Devel](/Walkthroughs/Devel-HTB)
 
 ## Vulnhubs
->> [Raven-2](/Walkthroughs/Raven)
+>> [Raven-2](/Walkthroughs/Raven-2)
 
 ## Overthewire 
 >> [Bandit Level 0-5](/Walkthroughs/Bandit-OTW)
